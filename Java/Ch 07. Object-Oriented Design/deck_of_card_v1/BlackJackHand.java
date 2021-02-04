@@ -1,10 +1,11 @@
 package deck_of_card_v1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BlackJackHand extends Hand<BlackJackCard>{
     public int score(){
-        ArrayList<Integer> scores = getAllPossibleScores();
+        List<Integer> scores = getAllPossibleScores();
         int maxScore = Integer.MIN_VALUE;
         int minScore = Integer.MAX_VALUE;
         for (int score: scores){
@@ -17,15 +18,15 @@ public class BlackJackHand extends Hand<BlackJackCard>{
         return maxScore == Integer.MIN_VALUE ? minScore:maxScore;
     }
 
-    public ArrayList<Integer> getAllPossibleScores(){
-        ArrayList<Integer> scores = new ArrayList<Integer>();
+    public List<Integer> getAllPossibleScores(){
+    	List<Integer> scores = new ArrayList<Integer>();
         for (BlackJackCard card: cards){
             addCardToUpdateScore(scores, card);
         }
         return scores;
     }
 
-    public void addCardToUpdateScore(ArrayList<Integer> scores, BlackJackCard card){
+    public void addCardToUpdateScore(List<Integer> scores, BlackJackCard card){
         if (cards.size() == 0){
             scores.add(0);
         }
