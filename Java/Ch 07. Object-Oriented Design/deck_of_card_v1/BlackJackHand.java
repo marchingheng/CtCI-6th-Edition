@@ -30,6 +30,7 @@ public class BlackJackHand extends Hand<BlackJackCard>{
         if (cards.size() == 0){
             scores.add(0);
         }
+        // this is always 0?
         int length = scores.size();
         for (int i = 0; i < length; i++) {
             int score = scores.get(i);
