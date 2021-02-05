@@ -6,7 +6,7 @@ public class BlackJackCard extends Card{
     }
 
     public int getValue(){
-        if (isFaceValue()){
+        if (isFaceCard()){
             return 10;
         }
         return faceValue;
@@ -18,7 +18,7 @@ public class BlackJackCard extends Card{
         }
         return getValue();
     }
-
+    
     public int getMinValue(){
         if (isAce()){
             return 1;
@@ -30,7 +30,7 @@ public class BlackJackCard extends Card{
         return faceValue == 1;
     }
 
-    public boolean isFaceValue(){
+    public boolean isFaceCard() {
         return faceValue >= 11 && faceValue <= 13;
     }
 }
