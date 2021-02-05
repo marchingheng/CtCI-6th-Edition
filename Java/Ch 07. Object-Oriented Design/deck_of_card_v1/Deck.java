@@ -24,12 +24,12 @@ public class Deck <T extends Card>{
         dealtIndex += 1;
         return card;
     }
-
+    // check out other shuffle methods
     public void shuffle(){
         Random random = new Random();
         for (int i = 0; i < deckOfCards.size(); i++) {
-            int index1 = random.ints(0, deckOfCards.size()).iterator().nextInt();
-            int index2 = random.ints(0, deckOfCards.size()).iterator().nextInt();
+            int index1 = random.nextInt(deckOfCards.size());
+            int index2 = random.nextInt(deckOfCards.size());
             T card1 = deckOfCards.get(index1);
             T card2 = deckOfCards.get(index2);
             deckOfCards.set(index1, card2);
