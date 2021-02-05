@@ -3,9 +3,10 @@ package deck_of_card_v1;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hand <T extends Card>{
-    protected ArrayList<T> cards;
+    protected List<T> cards;
     protected int score;
 
     public Hand(){
